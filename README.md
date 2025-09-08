@@ -39,8 +39,10 @@ workflow (必须选中)
 
 ## 3、在 cron-job.org 中配置 ##
 
-1）创建新的定时任务：
+1）注册登陆定时任务网站：https://cron-job.org
 
+2）创建新的定时任务：
+新建任务
 标题: SAP保活（任意自取）
 URL  网址:
 https://api.github.com/repos/[用户名]/[仓库名]/actions/workflows/main.yml/dispatches
@@ -64,5 +66,5 @@ json
 
 最后保存计划。
 
-2）测试是否成功
+3）测试是否成功
 点击“测试运行”，运行状态返回 ✓204 No Content，表示运行成功。
