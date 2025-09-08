@@ -53,9 +53,9 @@ https://api.github.com/repos/[用户名]/[仓库名]/actions/workflows/main.yml/
 请求方法: POST
 
 请求头:
-Authorization: token [您的PAT]
-Accept: application/vnd.github.v3+json
-Content-Type：application/json
+Authorization: token [您的PAT] <br> 
+Accept: application/vnd.github.v3+json <br> 
+Content-Type：application/json <br> 
 User-Agent：cron-job.org
 
 请求体:
