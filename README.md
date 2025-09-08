@@ -1,6 +1,6 @@
 # 利用外部定时器cron-job，多账户多app应用一起并发拉起保活 #
 ## 1、设置对应好的环境变量 ##
-每个账号每个app都不一样，需要多个一起的话，每个变量都在settings——Secrets and variables——Actions——New repository secret，新建变量分别填好对应的。
+每个账号每个app都不一样，需要多个一起的话，每个变量都新建变量分别填好对应的。路径是你所在的项目settings——Secrets and variables——Actions——New repository secret。
 比如新加坡的第一个应用的API，变量名称填写：CF_API_APP1，对应的值填写：https://api.cf.ap21.hana.ondemand.com
 其他的也是以此类推。
 
