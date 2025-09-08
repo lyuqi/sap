@@ -1,0 +1,67 @@
+name: SAP CF APP保活 - 多应用并发
+
+on:
+  workflow_dispatch:
+
+jobs:
+  keepalive:
+    runs-on: ubuntu-latest
+    timeout-minutes: 8
+    strategy:
+      matrix:
+        # 在此处定义所有应用的配置
+        app_config:
+          - name: "应用1"
+            username_secret: "CF_USERNAME_APP1"
+            password_secret: "CF_PASSWORD_APP1"
+            api_secret: "CF_API_APP1"
+            org_secret: "CF_ORG_APP1"
+            space_secret: "CF_SPACE_APP1"
+            app_secret: "CF_APP_APP1"
+            
+          - name: "应用2"
+            username_secret: "CF_USERNAME_APP2"
+            password_secret: "CF_PASSWORD_APP2"
+            api_secret: "CF_API_APP2"
+            org_secret: "CF_ORG_APP2"
+            space_secret: "CF_SPACE_APP2"
+            app_secret: "CF_APP_APP2"
+            
+          - name: "应用3"
+            username_secret: "CF_USERNAME_APP3"
+            password_secret: "CF_PASSWORD_APP3"
+            api_secret: "CF_API_APP3"
+            org_secret: "CF_ORG_APP3"
+            space_secret: "CF_SPACE_APP3"
+            app_secret: "CF_APP_APP3"
+
+          - name: "应用4"
+            username_secret: "CF_USERNAME_APP4"
+            password_secret: "CF_PASSWORD_APP4"
+            api_secret: "CF_API_APP4"
+            org_secret: "CF_ORG_APP4"
+            space_secret: "CF_SPACE_APP4"
+            app_secret: "CF_APP_APP4"
+
+          - name: "应用5"
+            username_secret: "CF_USERNAME_APP5"
+            password_secret: "CF_PASSWORD_APP5"
+            api_secret: "CF_API_APP5"
+            org_secret: "CF_ORG_APP5"
+            space_secret: "CF_SPACE_APP5"
+            app_secret: "CF_APP_APP5"
+            
+        # 可以继续添加更多应用配置...
+      max-parallel: 5  # 同时运行的最大任务数
+
+    steps:
+      - name: KeepAlive for ${{ matrix.app_config.name }}
+        uses: docker://ghcr.io/uncleluogithub/cf-keepalive:latest
+        env:
+          CF_USERNAME: ${{ secrets[matrix.app_config.username_secret] }}
+          CF_PASSWORD: ${{ secrets[matrix.app_config.password_secret] }}
+          CF_API: ${{ secrets[matrix.app_config.api_secret] }}
+          CF_ORG: ${{ secrets[matrix.app_config.org_secret] }}
+          CF_SPACE: ${{ secrets[matrix.app_config.space_secret] }}
+          CF_APP: ${{ secrets[matrix.app_config.app_secret] }}
+          CF_SET_PROCESS_HC: "true"
