@@ -43,9 +43,9 @@ workflow (必须选中)
 
 2）创建新的定时任务：
 新建任务
-标题: SAP保活（任意自取）
-URL  网址:
-https://api.github.com/repos/[用户名]/[仓库名]/actions/workflows/main.yml/dispatches
+标题: SAP保活（任意自取） <br> 
+URL  网址: <br> 
+https://api.github.com/repos/[用户名]/[仓库名]/actions/workflows/main.yml/dispatches <br> 
 将 [用户名] 和 [仓库名] 替换为您的实际信息
 
 运行任务根据自己需求勾选，我选的是自定，小时选8，分钟选15，表达式是：*/15 8 * * *
