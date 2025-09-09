@@ -52,7 +52,7 @@ jobs:
             app_secret: "CF_APP_APP5"
             
         # 可以继续添加更多应用配置...
-      max-parallel: 5  # 同时运行的最大任务数
+      max-parallel: 1  # 同时运行的最大任务数
 
     steps:
       - name: KeepAlive for ${{ matrix.app_config.name }}
