@@ -68,11 +68,12 @@ User-Agent：cron-job.org
 {"ref":"main"}
 
 如图：
-如图：
 ![Image](https://github.com/jok699/sap/blob/main/cron02.png)
 
 最后保存计划。
 
 3）测试是否成功
 点击“测试运行”，运行状态返回 ✓204 No Content，表示运行成功。
+
+如图：
 ![Image](https://github.com/jok699/sap/blob/main/cron03.png)
