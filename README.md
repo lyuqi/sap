@@ -55,16 +55,17 @@ https://api.github.com/repos/[用户名]/[仓库名]/actions/workflows/main.yml/
 ![Image](https://github.com/jok699/sap/blob/main/cron01.png)
 
 
-进阶处：
-请求方法: POST
+进阶处：  <br>  <br> 
+请求方法:   <br> 
+POST
 
-请求头:
+请求头:  <br> 
 Authorization: token [您的PAT] <br> 
 Accept: application/vnd.github.v3+json <br> 
 Content-Type：application/json <br> 
 User-Agent：cron-job.org
 
-请求体:
+请求体:  <br> 
 {"ref":"main"}
 
 如图：
