@@ -51,6 +51,10 @@ https://api.github.com/repos/[用户名]/[仓库名]/actions/workflows/main.yml/
 运行任务根据自己需求勾选，我选的是自定，小时选8，分钟选15，表达式是：*/15 8 * * *
 也就是8~9点每15分钟运行一次。
 
+如图：
+![Image](https://github.com/jok699/sap/blob/main/cron01.png)
+
+
 进阶处：
 请求方法: POST
 
@@ -61,8 +65,11 @@ Content-Type：application/json <br>
 User-Agent：cron-job.org
 
 请求体:
-json
 {"ref":"main"}
+
+如图：
+如图：
+![Image](https://github.com/jok699/sap/blob/main/cron02.png)
 
 最后保存计划。
 
